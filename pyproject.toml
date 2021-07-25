@@ -1,0 +1,46 @@
+[tool.poetry]
+name = "brand-detection"
+version = "0.1.0"
+description = ""
+authors = ["Nobody <nobody@rewe-digital.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+pandas = "^1.2.4"
+numpy = "^1.20.2"
+nltk = "^3.6.1"
+scikit-learn = "^0.24.1"
+python-crfsuite = "^0.9.7"
+sklearn-crfsuite = "^0.3.6"
+
+[tool.poetry.dev-dependencies]
+pytest = "^5.2"
+black = {version = "^20.8b1", allow-prereleases = true}
+isort = "^5.8.0"
+flake8 = "^3.9.1"
+mypy = "^0.812"
+lxml = "^4.6.3"
+pytest-cov = "^2.11.1"
+
+[tool.black]
+line-length = 89
+
+[tool.isort]
+line_length = 89
+force_single_line = true
+force_grid_wrap = 0
+atomic = true
+include_trailing_comma = true
+lines_after_imports = 2
+lines_between_types = 1
+multi_line_output = 3
+use_parentheses = true
+skip_glob = ["*/setup.py"]
+filter_files = true
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.scripts]
+target = "brand_detection.main:main"
