@@ -8,5 +8,4 @@ Conditional Random Field has been used when information about neighboring labels
 Execute step by step using poetry script
 ```
 poetry run target
-
 ```
